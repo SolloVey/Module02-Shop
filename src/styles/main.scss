@@ -1,0 +1,58 @@
+$bgb: gray;
+$bg: #000;
+$bgd: green;
+$rrr: red;
+$bbb: blue;
+$yyy: yellow;
+
+body {
+
+	background-color: $bgb;
+}
+
+.box {
+
+	background-color: $bg;
+
+	&__title {
+		color: $rrr;
+	}
+
+	&__image {
+		max-width: 200px;
+	}
+
+	&__fb {
+		margin-left: 50px;
+		background: $bgd;
+		fill: $rrr;
+		&:hover {
+			fill: $bg;
+			background: $yyy;
+		}
+	}
+}
+
+.main {
+
+	&__desc {
+		color: $bgd;
+	}
+
+	&__description {
+		color: $bbb;
+	}
+}
+
+.svg-first-img {
+
+	background-color:$bgd;
+	max-width: 150px;
+}
+
+.svg-second-img {
+
+	background-color: $bgb;
+	width: 100px;
+	height: 50px;
+}
