@@ -1,3 +1,6 @@
+// Сбрасываем стили по умолчанию, подключаем normalize.css
+import 'normalize.css'
+
 // Подключение к проекту фала со стилями.
 import './styles/main.scss';
 
