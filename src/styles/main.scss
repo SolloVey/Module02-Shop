@@ -133,6 +133,8 @@ body {
 	}
 	&__image {
 		width: 92%;
+		box-shadow: 30px 55px 60px -60px rgba(35, 35, 36, 0.8);
+		border-radius: 100%;
 	}
 	&__btn {
 		background-color: transparent;
