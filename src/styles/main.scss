@@ -20,11 +20,22 @@ body {
 
 .header {
 	max-width: 1440px;
-	margin: 0px auto 6rem;
+	margin: 0px auto 4.8rem;
 	padding: 4rem 15px 0 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 10px;
+	&__wrapFirst {
+		display: flex;
+		align-items: center;
+		gap: 12rem;
+	}
+	&__wrapSecond {
+		display: flex;
+		align-items: center;
+		gap: 7.5rem;
+	}
 	&__nav {
 		display: flex;
 		list-style-type: none;
@@ -50,8 +61,8 @@ body {
 	}
 	&__cart {
 		display: block;
-		width: 3.8rem;
-		height: 3.8rem;
+		width: 4rem;
+		height: 4rem;
 		border-radius: 100%;
 		background-color: $orange;
 		background-image: url(../images/cart.svg);
@@ -78,9 +89,14 @@ body {
 	display: block;
 	background-image: url(../images/logo.svg);
 	background-repeat: no-repeat;
-	background-size: cover;
-	width: 12.3rem;
+	background-size: contain;
+	width: 12rem;
 	height: 3.2rem;
+	transition: 0.3s;
+}
+
+.logo:hover {
+	transform: scale(1.1);
 }
 
 .container {
@@ -94,15 +110,17 @@ body {
 	background-image: url(../images/main.png);
 	background-size: cover;
 	background-position-x: center;
+	background-repeat: no-repeat;
 	position: relative;
 	padding-bottom: 187px;
+	z-index: 0;
 	&__item {
 		margin-left: 12rem;
 		max-width: 378px;
 		margin-top: 6rem;
 	}
 	&__link {
-		margin-top: 6rem;
+		margin-top: 5.2rem;
 	}
 	&__flex {
 		display: flex;
@@ -111,8 +129,8 @@ body {
 		gap: 30px;
 	}
 	&__cover {
-		flex-basis: 763px;
-		height: 763px;
+		flex-basis: 758px;
+		height: 758px;
 		border: 1px solid rgba($green, 0.4);
 		border-radius: 100%;
 		display: flex;
@@ -122,8 +140,8 @@ body {
 		position: relative;
 	}
 	&__line{
-		width: 658px;
-		height: 658px;
+		width: 656px;
+		height: 656px;
 		border: 1px solid rgba($green, 0.4);
 		border-radius: 100%;
 		display: flex;
@@ -132,9 +150,13 @@ body {
 		align-items: center;
 	}
 	&__image {
-		width: 92%;
+		width: 93%;
 		box-shadow: 30px 55px 60px -60px rgba(35, 35, 36, 0.8);
 		border-radius: 100%;
+	}
+	&__text {
+		padding-top: 3.5rem;
+		line-height: 1;
 	}
 	&__btn {
 		background-color: transparent;
@@ -159,24 +181,24 @@ body {
 			position: absolute;
 		}
 		&_1 {
-			top: 6.3%;
-    		left: 8.5%;
+			top: 5.8%;
+    		left: 8.2%;
 			&::before {
 				bottom: 21%;
     			right: -59%;
 			}
 		}
 		&_2 {
-			top: 25.8%;
-    		right: 0.7%;
+			top: 25.5%;
+    		right: 0.3%;
 			&::before {
 				top: 39.5%;
     			left: -34%;
 			}
 		}
 		&_3 {
-			bottom: -6.2%;
-    		right: 32.3%;
+			bottom: -6.4%;
+    		right: 32.1%;
 			&::before {
 				top: -57%;
     			left: 26%;
@@ -187,48 +209,56 @@ body {
 		display: block;
 		color: rgba($green, 0.8);
 		margin-bottom: 0.5rem;
+		z-index: -1;
 	}
 	&__tomato {
 		position: absolute;
-		bottom: 10.7%;
-    	right: 6%;
+		bottom: 10.9%;
+    	right: 5.9%;
 		width: 11rem;
+		z-index: -1;
 	}
 	&__peas_one {
 		position: absolute;
 		left: 0.4%;
-		bottom: 23.6%;
+		bottom: 22.2%;
 		width: 4.7rem;
+		z-index: -1;
 	}
 	&__peas_two {
 		position: absolute;
 		left: -0.5%;
-		bottom: 20.5%;
+		bottom: 19%;
 		width: 3.6rem;
+		z-index: -1;
 	}
 	&__peas_three {
 		position: absolute;
-		left: 1.6%;
-		bottom: 16.5%;
+		left: 1.5%;
+		bottom: 15.1%;
 		width: 6.6rem;
+		z-index: -1;
 	}
 	&__pepper {
 		position: absolute;
-		left: 1.6%;
-		top: 35.5%;
+		left: 1.5%;
+		top: 37%;
 		width: 8.6rem;
+		z-index: -1;
 	}
 	&__cucumber {
 		position: absolute;
-		left: 37.3%;
+		left: 35.8%;
 		top: 0%;
 		width: 8.5rem;
+		z-index: -1;
 	}
 	&__avocado {
 		position: absolute;
 		right: 0%;
 		top: 5%;
 		width: 17.5rem;
+		z-index: -1;
 	}
 }
 
@@ -237,8 +267,13 @@ body {
 	font-weight: 700;
 	font-size: 8rem;
 	margin: 0;
+	line-height: 1;
 	&__span {
 		font-style: italic;
+		&::after {
+			content: "!";
+    		font-style: normal;
+		}
 	}
 	&_block {
 		.title__span {
@@ -249,21 +284,123 @@ body {
 
 .description {
 	margin: 0;
+	line-height: 1.5;
 	&_size-s {
 		font-size: 1.8rem;
+	}
+	&_size-m {
+		font-size: 2.4rem;
 	}
 }
 
 .link {
 	color: $white;
 	text-transform: uppercase;
-	letter-spacing: .1em;
+	letter-spacing: .13rem;
 	padding: 2.5rem 4.2rem;
 	background-color: $orange;
 	box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
 	text-decoration: none;
 	border-radius: 3.8rem;
 	display: inline-block;
+}
+
+.link:hover {
+	background-color: #bf601f;
+}
+
+.offer {
+	background-image: url(../images/offer.png);
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	padding-top: 2rem;
+	padding-bottom: 200px;
+	&__text {
+		margin-top: 6rem;
+		max-width: 700px;
+	}
+	&__slider {
+		overflow: hidden;
+		padding: 95px 4px 0px 4px;
+	}
+}
+
+.swiper {
+	overflow: initial;
+	padding-bottom: .2rem;
+	&-slide {
+		box-sizing: border-box;
+		border: 1px solid #a9ac9f;
+		border-radius: 1.5rem;
+		padding: 3.8rem 3.4rem;
+	    height: 518px;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: flex-end;
+		&:hover {
+			box-shadow: 0 0 0 2px #a9ac9f;
+		}
+	}
+	&-slide__title {
+		font-size: 3rem;
+		font-family: $font-cormorant;
+		margin-bottom: 0.9rem;
+	}
+	&-slide__text {
+		max-width: 265px;
+		line-height: 1.5;
+		margin-bottom: 3rem;
+		opacity: .7;
+	}
+	&-link {
+		font-weight: 500;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $green;
+		letter-spacing: .1rem;
+		width: 16.2rem;
+		opacity: .8;
+		&::before {
+			content: '+';
+			display: inline-block;
+			font-weight: 400;
+			font-size: 2.5rem;
+			text-align: center;
+			width: 3rem;
+			height: 3rem;
+			bottom: 1rem;
+			border: 1px solid #1e311e;
+			border-radius: 100%;
+			opacity: .8;
+			margin-right: 2rem;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&-pagination {
+		display: none;
+	}
+	&-button-next, &-button-prev {
+		top: -59px;
+		opacity: .4;
+		&::after {
+			color: $green;
+			font-size: 20px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&-button-prev {
+		left: initial;
+		right: 7rem;
+	}
+	&-button-next {
+		right: -1.2rem;
+    	left: auto;
+	}
 }
 
 
