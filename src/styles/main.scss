@@ -368,7 +368,7 @@ body {
 		&::before {
 			content: '';
 			background-image: url("../images/plus.svg");
-			background-image: cover;
+			background-size: cover;
     		background-repeat: no-repeat;
 			display: block;
 			width: 3rem;
