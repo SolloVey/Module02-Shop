@@ -351,14 +351,14 @@ body {
 		max-width: 265px;
 		line-height: 1.5;
 		margin-bottom: 3.2rem;
-		opacity: .7;
+		color: rgba($green, 0.7);
 	}
 	&-link {
 		font-weight: 500;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: $green;
-		letter-spacing: .1rem;
+		letter-spacing: 0.1rem;
 		width: 16.2rem;
 		opacity: .8;
 		display: flex;
@@ -367,14 +367,12 @@ body {
 		gap: 2rem;
 		&::before {
 			content: '';
-			background: url("../images/plus.svg");
-			background-size: cover;
+			background-image: url("../images/plus.svg");
+			background-image: cover;
     		background-repeat: no-repeat;
-    		background-position: center;
 			display: block;
 			width: 3rem;
 			height: 3rem;
-			border-radius: 100%;
 		}
 		&:hover {
 			opacity: 1;
