@@ -345,12 +345,12 @@ body {
 	&-slide__title {
 		font-size: 3rem;
 		font-family: $font-cormorant;
-		margin-bottom: 0.9rem;
+		margin-bottom: 1rem;
 	}
 	&-slide__text {
 		max-width: 265px;
 		line-height: 1.5;
-		margin-bottom: 3rem;
+		margin-bottom: 3.2rem;
 		opacity: .7;
 	}
 	&-link {
@@ -361,19 +361,20 @@ body {
 		letter-spacing: .1rem;
 		width: 16.2rem;
 		opacity: .8;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
 		&::before {
-			content: '+';
-			display: inline-block;
-			font-weight: 400;
-			font-size: 2.5rem;
-			text-align: center;
+			content: '';
+			background: url("../images/plus.svg");
+			background-size: cover;
+    		background-repeat: no-repeat;
+    		background-position: center;
+			display: block;
 			width: 3rem;
 			height: 3rem;
-			bottom: 1rem;
-			border: 1px solid #1e311e;
 			border-radius: 100%;
-			opacity: .8;
-			margin-right: 2rem;
 		}
 		&:hover {
 			opacity: 1;
