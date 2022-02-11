@@ -270,7 +270,7 @@ body {
 	line-height: 1;
 	&__span {
 		font-style: italic;
-		&::after {
+		&_sign::after {
 			content: "!";
     		font-style: normal;
 		}
@@ -279,6 +279,9 @@ body {
 		.title__span {
 			display: block;
 		}
+	}
+	&_s {
+		letter-spacing: 0.1rem;
 	}
 }
 
@@ -315,7 +318,7 @@ body {
 	background-position-x: center;
 	background-repeat: no-repeat;
 	padding-top: 2rem;
-	padding-bottom: 200px;
+	padding-bottom: 12.8rem;
 	&__text {
 		margin-top: 6rem;
 		max-width: 700px;
@@ -338,20 +341,53 @@ body {
 	    display: flex;
 	    flex-direction: column;
 	    justify-content: flex-end;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	    z-index: 0;
 		&:hover {
-			box-shadow: 0 0 0 2px #a9ac9f;
+			box-shadow: 0 0 0 2px #a9ac9f inset;
+			.swiper-slide__hover {
+				height: 230px;
+				opacity: 1;
+			}
+			&::after {
+		    	content: '';
+		    	background-color: rgba($white, .55);
+		    	width: calc(100% - 4px);
+		    	height: calc(100% - 4px);
+		    	position: absolute;
+		    	top: 2px;
+		    	left: 2px;
+		    	border-radius: 1.5rem;
+		    	z-index: -1;
+		    }
 		}
-	}
-	&-slide__title {
-		font-size: 3rem;
-		font-family: $font-cormorant;
-		margin-bottom: 1rem;
-	}
-	&-slide__text {
-		max-width: 265px;
-		line-height: 1.5;
-		margin-bottom: 3.2rem;
-		color: rgba($green, 0.7);
+		&_milk {
+			background-image: url(../images/milk.png);
+		}
+		&_pasta {
+			background-image: url(../images/pasta.png);
+		}
+		&_steaks {
+			background-image: url(../images/steaks.png);
+		}
+		&__title {
+			font-size: 3rem;
+			font-family: $font-cormorant;
+			margin-bottom: 0;
+		}
+		&__hover {
+			height: 0px;
+			opacity: 0;
+		}
+		&__text {
+			max-width: 265px;
+			line-height: 1.5;
+			margin-top: 2.4rem;
+			margin-bottom: 3.2rem;
+			color: rgba($green, 0.7);
+		}
 	}
 	&-link {
 		font-weight: 500;
@@ -399,6 +435,72 @@ body {
 	&-button-next {
 		right: -1.2rem;
     	left: auto;
+	}
+}
+
+.about {
+	background-image: url(../images/about.png);
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	padding: 3.7rem 0rem 12.8rem 0rem;
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 3rem;
+	}
+	&__text {
+		max-width: 580px;
+		padding-left: 12rem;
+	}
+	&__list {
+		display: flex;
+		font-family: $font-cormorant;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 3rem;
+		list-style-type: none;
+		margin-top: 3.6rem;
+		padding-left: 0px;
+		gap: 8.3rem;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		&::before {
+			content: '';
+			border: 1px solid rgba($green, 0.4);
+			border-radius: 100%;
+			width: 8.7rem;
+			height: 8.7rem;
+		}
+		&_fruits::before {
+			content: '';
+			background-image: url("../images/fruits.png");
+			background-size: 4.3rem 4.1rem;
+    		background-repeat: no-repeat;
+    		background-position: center;
+
+		}
+		&_traditional::before {
+			content: '';
+			background-image: url("../images/traditional.png");
+			background-size: 3.9rem 3.9rem;
+    		background-repeat: no-repeat;
+    		background-position: center;
+
+		}
+		&_good::before {
+			content: '';
+			background-image: url("../images/good.png");
+			background-size: 4.5rem 3.9rem;
+    		background-repeat: no-repeat;
+    		background-position: center;
+
+		}
 	}
 }
 
