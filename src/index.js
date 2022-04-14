@@ -1,5 +1,5 @@
 // Сбрасываем стили по умолчанию, подключаем normalize.css
-import 'normalize.css'
+import 'normalize.css';
 
 // import Swiper and modules styles
 import 'swiper/css';
@@ -23,25 +23,36 @@ import $ from 'jquery';
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-var swiper = new Swiper(".offerSwiper", {
+var swiper = new Swiper('.offerSwiper', {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     modules: [Navigation, Pagination],
 });
 
-
-
-
-
-
+var swiper = new Swiper('.trendsSwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    modules: [Navigation, Pagination],
+});
