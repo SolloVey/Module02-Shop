@@ -303,7 +303,7 @@ body {
     	line-height: 1.5;
 	}
 	&__trends_size-l {
-		max-width: 24rem;
+		max-width: 24.5rem;
 		min-height: 5.5rem;
 		font-size: 1.6rem;
 		color: rgba($green, 0.7);
@@ -400,6 +400,7 @@ body {
 	    }
 		&:hover {
 			box-shadow: 0 0 0 2px #a9ac9f inset;
+			transition: 0.3s;
 		}
 		&_milk {
 			background-image: url(../images/milk.png);
@@ -678,6 +679,7 @@ body {
 		height: 51rem;
 		&:hover {
 			box-shadow: 0 0 0 2px #a9ac9f inset;
+			transition: 0.3s;
 		}
 	}
 	&__footer {
@@ -709,6 +711,6 @@ body {
 		margin-top: 0.3rem;
     	margin-bottom: 3rem;
 	}
-	&__description {
-	}
+	// &__description {
+	// }
 }
