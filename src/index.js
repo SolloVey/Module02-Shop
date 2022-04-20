@@ -56,3 +56,25 @@ var swiper = new Swiper('.trendsSwiper', {
     },
     modules: [Navigation, Pagination],
 });
+
+
+
+// window.onload = function () {
+//     let item=document.getElementsByClassName('catalog-grid__item');
+//     let btn=document.querySelector('.catalog__btn');
+//     for (let i=8;i<item.length;i++) {
+//         item[i].style.display = "none";
+//     }
+  
+//     let countD = 8;
+//     btn.addEventListener('click', function() {
+//         let item=document.getElementsByClassName('catalog-grid__item');
+//         countD += 4;
+//         console.log('btn')
+//         if (countD <= item.length){
+//             for(let i=0;i<countD;i++){
+//                 item[i].style.display = "block";
+//             }
+//         }
+//     })
+// }
