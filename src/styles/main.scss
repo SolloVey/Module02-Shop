@@ -494,6 +494,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		gap: 2rem;
+		transition: 0.3s;
 		&::before {
 			content: '';
 			background-image: url("../images/plus.svg");
