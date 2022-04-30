@@ -57,6 +57,19 @@ var swiper = new Swiper('.trendsSwiper', {
     modules: [Navigation, Pagination],
 });
 
+// Анимация svg in-line при наведении мыши
+let list = document.getElementById('list');
+let animationOne = document.getElementById('mskOne');
+
+list.addEventListener('mouseenter', function () {
+    animationOne.beginElement();
+});
+
+
+
+
+
+
 
 
 // window.onload = function () {

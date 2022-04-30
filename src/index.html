@@ -11,7 +11,7 @@
             <header class="header">
                 <div class="header__wrapFirst">
                     <a href="#" class="logo"></a>
-                    <nav>
+                    <nav class="header__navigation">
                         <ul class="header__nav">
                             <li class="header__item">
                                 <a href="#" class="header__link">Наша продукция</a>
@@ -167,10 +167,70 @@
                             высокие технологии и достижения научного
                         </p>
                     </div>
-                    <ul class="about__list">
-                        <li class="about__item">Здоровье</li>
-                        <li class="about__item">Традиции</li>
-                        <li class="about__item">Вкус</li>
+                    <ul class="about__list" id="list">
+                        <li class="about__item">Здоровье
+                            <div class="about__item__circle">
+                                <span class="about__item__circle_span">
+                                    <svg id="svg1" width="100%" height="100%" viewBox="8 8 104 104">
+                                        <defs>
+                                            <mask id="msk1">
+                                                <rect width="108%" height="108%" fill="white"/>
+                                                <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="4">
+                                                    <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
+                                                    <animate attributeName="stroke-dashoffset" begin="indefinite" dur="1s" repeatCount="1.00001s" repeatDur="1.00001s" values="0;-314;" fill="white" id="mskOne"/> 
+                                                </circle>    
+                                            </mask>
+                                        </defs>
+                                            <!-- Путь заполнения линии прогрессбара     -->
+                                        <!-- <circle cx="60" cy="60" r="50" fill="none" stroke="#27300f" stroke-width="1"/> -->
+                                                <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
+                                        <circle cx="60" cy="60" r="50" mask="url(#msk1)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#d26a22" stroke-width="3">         
+                                    </svg> 
+                                </span>
+                            </div>
+                        </li>
+                        <li class="about__item">Традиции
+                            <div class="about__item__circle">
+                                <span class="about__item__circle_span">
+                                    <svg id="svg2" width="100%" height="100%" viewBox="8 8 104 104">
+                                        <defs>
+                                            <mask id="msk2">
+                                                <rect width="108%" height="108%" fill="white"/>
+                                                <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="4">
+                                                    <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
+                                                    <animate attributeName="stroke-dashoffset" begin="mskOne.repeat(1)" dur="1s" repeatCount="1.00001s" repeatDur="1.00001s" values="0;-314;" fill="white" id="mskTwo"/> 
+                                                </circle>    
+                                            </mask>
+                                        </defs>
+                                            <!-- Путь заполнения линии прогрессбара     -->
+                                        <!-- <circle cx="60" cy="60" r="50" fill="none" stroke="#27300f" stroke-width="1"/> -->
+                                                <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
+                                        <circle cx="60" cy="60" r="50" mask="url(#msk2)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#d26a22" stroke-width="3">         
+                                    </svg> 
+                                </span>
+                            </div>
+                        </li>
+                        <li class="about__item">Вкус
+                            <div class="about__item__circle">
+                                <span class="about__item__circle_span">
+                                    <svg id="svg3" width="100%" height="100%" viewBox="8 8 104 104">
+                                        <defs>
+                                            <mask id="msk3">
+                                                <rect width="108%" height="108%" fill="white"/>
+                                                <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="4">
+                                                    <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
+                                                    <animate attributeName="stroke-dashoffset" begin="mskTwo.repeat(1)" dur="1s" repeatCount="1.00001s" repeatDur="1.00001s" values="0;-314;" fill="white" id="mskThree" /> 
+                                                </circle>    
+                                            </mask>
+                                        </defs>
+                                            <!-- Путь заполнения линии прогрессбара     -->
+                                        <!-- <circle cx="60" cy="60" r="50" fill="none" stroke="#27300f" stroke-width="1"/> -->
+                                                <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
+                                        <circle cx="60" cy="60" r="50" mask="url(#msk3)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#d26a22" stroke-width="3">         
+                                    </svg> 
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
