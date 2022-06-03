@@ -750,7 +750,7 @@ body {
 		}
 		@media (max-width: $r_desk_1120) {
 			padding: 1.5rem 0rem;
-			flex-basis: 20rem;
+			flex-basis: 12rem;
 		}
 		@media (max-width: $r_tab_900) {
 			flex-basis: 15rem;
@@ -775,6 +775,9 @@ body {
 		@media (max-width: $r_desk_1280) {
 			padding: 1.5rem 4rem;
 		}
+		@media (max-width: $r_desk_hd) {
+			padding: 1.5rem 3rem;
+		} 
 		@media (max-width: $r_desk_1120) {
 			padding: 1.5rem 2.5rem;
 		}
@@ -898,6 +901,18 @@ body {
 	    	justify-content: flex-end;
 			background-size: contain;
 			padding: 4rem 3.7rem;
+			&::after {
+			    	content: '';
+			    	background-color: rgba($white, 0);
+			    	width: calc(100% - 4px);
+			    	height: calc(100% - 4px);
+			    	position: absolute;
+			    	top: 2px;
+			    	left: 2px;
+			    	border-radius: 1.5rem;
+					transition: 0.3s;
+			    	z-index: -1;
+			    }
 			@media (max-width: $r_desk_hd) {
 				padding: 3rem 3.7rem;
 			}
@@ -916,16 +931,7 @@ body {
 					}
 				}
 				&::after {
-			    	content: '';
 			    	background-color: rgba($white, .55);
-			    	width: calc(100% - 4px);
-			    	height: calc(100% - 4px);
-			    	position: absolute;
-			    	top: 2px;
-			    	left: 2px;
-			    	border-radius: 1.5rem;
-					transition: 0.3s;
-			    	z-index: -1;
 			    }
 	    	}
 	    }
@@ -1546,17 +1552,19 @@ body {
 		gap: 2rem;
 		padding: 0px;
 		@media (max-width: $r_desk_1120) {
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 1rem;
-		}
-		@media (max-width: $r_desk) {
-			justify-content: center;
-		}
-		@media (max-width: $r_tab) {
-			flex-wrap: nowrap;
+			// flex-wrap: wrap;
+			// justify-content: center;
 			justify-content: flex-start;
 			overflow-x: hidden;
+			gap: 1rem;
+		}
+		// @media (max-width: $r_desk) {
+		// 	justify-content: center;
+		// }
+		@media (max-width: $r_tab) {
+			// flex-wrap: nowrap;
+			// justify-content: flex-start;
+			// overflow-x: hidden;
 			margin-top: 6rem;
 		}
 		@media (max-width: $r_mob_360) {
@@ -1728,13 +1736,10 @@ body {
 			margin-top: 4rem;
 		}
 		@media (max-width: $r_tab_900) {
-			margin-left: 4rem;
+			margin-left: 0rem;
 		}
 		@media (max-width: $r_tab) {
 			flex-direction: column;
-		}
-		@media (max-width: $r_mob_400) {
-			margin-left: 0px;
 		}
 		@media (max-width: $r_mob_360) {
 			margin-top: 3.5rem;
@@ -1837,7 +1842,7 @@ body {
 address {
 	font-style: normal;
 	margin-top: 6.1rem;
-	max-width: 26.5rem;
+	max-width: 28rem;
 	@media (max-width: $r_tab) {
 		margin-top: 3.1rem;
 		max-width: 100%;
@@ -1880,6 +1885,9 @@ address {
 			flex-grow: 1;
 			margin-top: 5.9rem;
 			margin-left: 12rem;
+			@media (max-width:$r_desk_1120) {
+				margin-left: 6rem;
+			}
 			@media (max-width: $r_desk) {
 				margin-left: 4rem;
 				margin-right: 4rem;
@@ -2111,12 +2119,25 @@ footer {
     height: 4.8rem;
 	margin-top: 0.5rem;
 	flex-basis: 18rem;
+	@media (max-width: $r_tab_900) {
+		flex-basis: 15rem;
+	}
+	@media (max-width: $r_tab) {
+		flex-basis: 10rem;
+	}
 	@media (max-width: $r_mob_360) {
 		width: 12rem;
 		margin-top: 0rem;
 		flex-basis: auto;
 	}
 }
+
+.footer__info > .footer__list {
+	@media (max-width: $r_tab_900) {
+		font-size: 1.4rem;
+	}
+}
+
 .footer {
 	padding-top: 7.3rem;
 	@media (max-width: $r_mob_500) {
@@ -2148,7 +2169,7 @@ footer {
 			flex-basis: 75%;
 		}
 		@media (max-width: $r_tab_900) {
-			flex-basis: 78%;
+			flex-basis: 75%;
 		}
 		@media (max-width: $r_tab) {
 			flex-direction: column;

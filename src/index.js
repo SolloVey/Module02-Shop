@@ -103,6 +103,7 @@ list.addEventListener('mouseenter', function () {
 
 
 
+// Скрипт для добавления товаров "добавит еще"
 
 // window.onload = function () {
 //     let item=document.getElementsByClassName('catalog-grid__item');
