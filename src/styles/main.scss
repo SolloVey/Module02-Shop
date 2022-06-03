@@ -31,9 +31,6 @@ $r_desk_4k: 3760px; /*3840px*/
 
 html {
 	font-size: 10px;
-	// @media (max-width: $r_tab) {
-	// 	font-size: 8px;
-	// }
 }
 
 body {
@@ -696,8 +693,7 @@ body {
 			min-height: 5rem;
 			font-size: 1.2rem;
 			margin: 1.5rem 0rem 0rem;
-		}
-		
+		}		
 	}
 	&__trends_size-l {
 		max-width: 24.5rem;
@@ -1588,10 +1584,6 @@ body {
 				width: 20rem;
 				height: 6rem;
 			}
-			// @media (max-width: $r_desk_1120) {
-			// 	width: 20rem;
-    		// 	height: 5rem;
-			// }
 			@media (max-width: $r_mob_500) {
 				font-size: 1.4rem;
 			}
@@ -1672,16 +1664,16 @@ body {
 			max-width: 22.8rem;
 			-o-object-fit: contain;
 			   object-fit: contain;
-			   @media (max-width: $r_tab) {
-				   max-width: 16rem;
-				   height: 19rem;
-			   }
-			   @media (max-width: $r_mob_500) {
-				   height: 10rem;
-			   }
-			   @media (max-width: $r_mob_400) {
-				   height: 6.3rem;
-			   }
+			@media (max-width: $r_tab) {
+				max-width: 16rem;
+				height: 19rem;
+			}
+			@media (max-width: $r_mob_500) {
+			   height: 10rem;
+			}
+			@media (max-width: $r_mob_400) {
+			   height: 6.3rem;
+			}
 		}
 	}
 	&__title {
@@ -1716,8 +1708,8 @@ body {
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	@media (max-width: $r_desk) {
-			padding-bottom: 8rem;
-		}
+		padding-bottom: 8rem;
+	}
 	@media (max-width: $r_tab) {
 		padding-bottom: 4rem;
 	}
@@ -2454,7 +2446,6 @@ footer {
 	}
 }
 
-
 @-webkit-keyframes phone {
 	0%, 100% {
 		transform: rotate(0deg);
@@ -2477,4 +2468,3 @@ footer {
 		transform: rotate(-20deg);
 	}
 }
-
