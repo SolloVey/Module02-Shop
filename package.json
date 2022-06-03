@@ -17,6 +17,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "dragscroll": "^0.0.8",
     "html-webpack-plugin": "^5.5.0",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",

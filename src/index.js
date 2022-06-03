@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import 'dragscroll';
+
 // Подключение к проекту фала со стилями.
 import './styles/main.scss';
 
@@ -38,6 +40,21 @@ var swiper = new Swiper('.offerSwiper', {
         prevEl: '.swiper-button-prev',
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+        },
+        1000: {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+        }
+    }
 });
 
 var swiper = new Swiper('.trendsSwiper', {
@@ -55,6 +72,21 @@ var swiper = new Swiper('.trendsSwiper', {
         prevEl: '.swiper-button-prev',
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        1000: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+    },
 });
 
 // Анимация svg in-line при наведении мыши
@@ -91,3 +123,6 @@ list.addEventListener('mouseenter', function () {
 //         }
 //     })
 // }
+
+
+
