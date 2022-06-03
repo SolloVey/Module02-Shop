@@ -942,7 +942,7 @@ body {
 			@media (max-width: $r_mob_500) {
 				height: 360px;
 			}
-			@media (max-width: $r_mob_500) {
+			@media (max-width: $r_mob_400) {
 				height: 301px;
 			}
 	    }
@@ -1555,6 +1555,9 @@ body {
 			// justify-content: center;
 			justify-content: flex-start;
 			overflow-x: hidden;
+    		width: auto;
+			cursor: -webkit-grab;
+			cursor: grab;
 			gap: 1rem;
 		}
 		// @media (max-width: $r_desk) {
