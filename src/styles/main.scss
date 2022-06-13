@@ -440,11 +440,18 @@ body {
 				top: 17%;
 			}
 			@media (max-width: $r_desk_hd) {
-				right: -6%;
+				right: inherit;
+				top: inherit;
+				left: 2.5%;
+    			bottom: 5%;
 			}
 			&::before {
 				top: 39.5%;
     			left: -34%;
+				@media (max-width: $r_desk_hd) {
+					top: -40%;
+    				left: 100%;
+				}
 			}
 		}
 		&_3 {
@@ -1243,6 +1250,9 @@ body {
 		width: 46px;
 		border: none;
 		padding: 0px;
+		@media (max-width: $r_desk_hd) {
+			width: 38px;
+		}
 		@media (max-width: $r_desk_1120) {
 			font-size: 2rem;
 			width: 35px;
@@ -1548,16 +1558,16 @@ body {
 		margin: 0px;
 		margin-top: 9.1rem;
 		list-style-type: none;
+		cursor: -webkit-grab;
+			cursor: grab;
 		gap: 2rem;
 		padding: 0px;
+		overflow-x: hidden;
 		@media (max-width: $r_desk_1120) {
 			// flex-wrap: wrap;
 			// justify-content: center;
 			justify-content: flex-start;
-			overflow-x: hidden;
     		width: auto;
-			cursor: -webkit-grab;
-			cursor: grab;
 			gap: 1rem;
 		}
 		// @media (max-width: $r_desk) {
@@ -1587,6 +1597,7 @@ body {
 			width: 23rem;
 			height: 7rem;
 			text-decoration: none;
+			cursor: pointer;
 			color: $green;
 			opacity: .5;
 			transition: .3s;
