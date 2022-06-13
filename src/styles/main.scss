@@ -1562,7 +1562,10 @@ body {
 			cursor: grab;
 		gap: 2rem;
 		padding: 0px;
-		overflow-x: hidden;
+		overflow-x: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		@media (max-width: $r_desk_1120) {
 			// flex-wrap: wrap;
 			// justify-content: center;
@@ -1651,6 +1654,11 @@ body {
 		transition: 0.3s;
 		&:hover {
 			box-shadow: 0 0 0 2px #a9ac9f inset;
+		}
+		@media (max-width: $r_desk_1458) {
+			&:nth-child(n + 7) {
+				display: none;
+			}
 		}
 		@media (max-width: $r_tab) {
 			padding: 2.2rem 2rem 2.8rem;
