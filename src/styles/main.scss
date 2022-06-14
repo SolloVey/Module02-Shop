@@ -208,6 +208,7 @@ body {
 		}
 	}
 	&__buttons {
+		position: relative;
 		@media (max-width: $r_desk_hd) {
 			display: flex;
 			align-items: center;
@@ -216,6 +217,49 @@ body {
 		@media (max-width: $r_tab_900) {
 			gap: 1.2rem;
 		}
+	}
+	&__dropdown {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		bottom: -130px;
+		border-radius: 30px;
+		background-color: $white;
+		width: 280px;
+		padding: 27px 20px;
+		z-index: 1;
+		box-shadow: 0px 0px 33px 0px rgba($green, 0.3);
+		&::after {
+			content: '';
+			border: 20px solid transparent;
+			border-bottom: 20px solid $white;
+		}
+	}
+	&__cover {
+		position: relative;
+		width: 4rem;
+		height: 6rem;
+		overflow: hidden;
+	}
+	&__img {
+		position: absolute;
+		width: 4rem;
+		height: 6rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
+	&__text {
+		margin: 0px;
+	}
+	&__product {
+		display: inline-block;
+		color: $green;
+		text-decoration: none;
+		border-bottom: 1px solid $green;
 	}
 }
 
@@ -400,6 +444,7 @@ body {
 		position: absolute;
 		color: $green;
 		text-align: left;
+		cursor: pointer;
 		@media (max-width: $r_desk_1120) {
 			display: none;
 		}
@@ -959,7 +1004,7 @@ body {
 		&_milk {
 			background-image: url(../images/milk.png);
 			@media (max-width: $r_tab) {
-				background-image: url(../images/catalog/milk.jpg);
+				background-image: url(../images/catalog/milk.png);
 				background-size: 80%;
 				background-position: top center;
 			}
@@ -988,7 +1033,7 @@ body {
 		&_steaks {
 			background-image: url(../images/steaks.png);
 			@media (max-width: $r_tab) {
-				background-image: url(../images/catalog/chicken.jpg);
+				background-image: url(../images/catalog/chicken.png);
 				background-size: 80%;
 				background-position: top 25% center;
 			}
@@ -1567,19 +1612,11 @@ body {
 			display: none;
 		}
 		@media (max-width: $r_desk_1120) {
-			// flex-wrap: wrap;
-			// justify-content: center;
 			justify-content: flex-start;
     		width: auto;
 			gap: 1rem;
 		}
-		// @media (max-width: $r_desk) {
-		// 	justify-content: center;
-		// }
 		@media (max-width: $r_tab) {
-			// flex-wrap: nowrap;
-			// justify-content: flex-start;
-			// overflow-x: hidden;
 			margin-top: 6rem;
 		}
 		@media (max-width: $r_mob_360) {

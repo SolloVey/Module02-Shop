@@ -6,12 +6,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Подключаем мини-библиотеку DRAGSCROLL(скролл при удержании мышкой элемента и свайп элемента -> в произвольную сторону)
 import 'dragscroll';
 
-// Подключение к проекту фала со стилями.
+// Подключение к проекту файла со стилями.
 import './styles/main.scss';
 
-// Корректное отбражение изображений в проекте.
+// Корректное отображение изображений в проекте.
 
 // Метод используется при очень маленьком количестве изображений.
 // import './images/logo.svg';
@@ -103,11 +104,12 @@ list.addEventListener('mouseenter', function () {
 
 
 
-// Скрипт для добавления товаров "добавит еще"
+// Скрипт для добавления товаров "добавить еще"
 
 // window.onload = function () {
 //     let item=document.getElementsByClassName('catalog-grid__item');
 //     let btn=document.querySelector('.catalog__btn');
+
 //     for (let i=8;i<item.length;i++) {
 //         item[i].style.display = "none";
 //     }
