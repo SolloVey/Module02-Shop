@@ -502,6 +502,7 @@ body {
 		&_1 {
 			top: 5.8%;
     		left: 8.2%;
+			padding-right: 4rem;
 			@media (max-width: $r_desk_wxga) {
 				top: 4%;
 			}
@@ -510,7 +511,7 @@ body {
 			}
 			&::before {
 				bottom: 21%;
-    			right: -59%;
+    			right: 3%;
 			}
 		}
 		&_2 {
@@ -523,21 +524,24 @@ body {
 			@media (max-width: $r_desk_hd) {
 				right: inherit;
 				top: inherit;
-				left: -2.5%;
-    			bottom: 5%;
+				left: 4.5%;
+				bottom: 5%;
+				padding-left: 0rem;
+				padding-right: 3rem;
 			}
 			&::before {
 				top: 39.5%;
     			left: 5%;
 				@media (max-width: $r_desk_hd) {
-					top: -40%;
-    				left: 100%;
+					top: 10%;
+    				left: 83%;
 				}
 			}
 		}
 		&_3 {
 			bottom: -6.4%;
     		right: 32.1%;
+			padding-top: 3rem;
 			@media (max-width: $r_desk_wxga) {
 				bottom: -7.8%;
 			}
@@ -545,7 +549,7 @@ body {
 				bottom: -8.8%;
 			}
 			&::before {
-				top: -57%;
+				top: 9%;
     			left: 26%;
 			}
 		}
@@ -586,7 +590,7 @@ body {
 				right: inherit;
 				top: inherit;
 				left: -30px;
-    			bottom: 110px;
+    			bottom: 100px;
 			}
 		}
 		&_3 {
