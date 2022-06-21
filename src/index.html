@@ -47,13 +47,14 @@
                     <button class="header__cart">
                         <span class="header__counter">0</span>
                     </button>
-                    <div class="header__dropdown">
+                    <div class="header__dropdown" id="Notification">
                         <div class="header__cover">
                             <img class="header__img" src="images/catalog/milk.png" alt="Молоко топленое">
                         </div>
                         <p class="header__text">Вы добавили в корзину 
                             <a href="#" class="header__product">Молоко топленое</a>
                         </p>
+                        <button type="button" class="close" onclick="document.getElementById('Notification').style.visibility='hidden'"></button>
                     </div>
                 </div>
             </header>
@@ -80,15 +81,42 @@
                         <div class="main__line">
                             <img class="main__image" src="images/plate.png" alt="Тарелка с салатом"/>
                         </div>
-                        <button class="main__btn main__btn_1" type="button">
+                        <button class="main__btn main__btn_1" type="button" id="btn_1">
                             <span class="main__food">Авокадо</span> 134 руб
                         </button>
-                        <button class="main__btn main__btn_2" type="button">
+                        <div class="main__about main__about_1" id="FoodOne">
+                            <h3 class="main__title">Авокадо</h3>
+                            <p class="main__description">
+                                Авокадо, Свежий урожай, 1шт.
+                            </p>
+                            <p class="main__price">134 руб/шт.</p>
+                        </div>
+                        <button class="main__btn main__btn_2" type="button" id="btn_2">
                             <span class="main__food">Картофель</span> 169 руб
                         </button>
-                        <button class="main__btn main__btn_3" type="button">
+                        <!-- tooltip всплывает по клику на кнопку -->
+                        <!-- <button class="main__btn main__btn_2" type="button" onclick="document.getElementById('FoodTwo').style.visibility='visible'">
+                            <span class="main__food">Картофель</span> 169 руб
+                        </button> -->
+                        <div class="main__about main__about_2" id="FoodTwo">
+                            <h3 class="main__title">Картофель</h3>
+                            <p class="main__description">
+                                Картофель Молодой, Свежий урожай, 1кг
+                            </p>
+                            <p class="main__price">169 руб/кг</p>
+                            <!-- <button class="close close_second" onclick="document.getElementById('FoodTwo').style.visibility='hidden'"></button> -->
+                            <!-- <button class="close close_second"></button> -->
+                        </div>
+                        <button class="main__btn main__btn_3" type="button" id="btn_3">
                             <span class="main__food">Томаты</span> 215 руб
                         </button>
+                        <div class="main__about main__about_3" id="FoodThree">
+                            <h3 class="main__title">Томаты</h3>
+                            <p class="main__description">
+                                Томаты, Свежий урожай, 1кг
+                            </p>
+                            <p class="main__price">215 руб/кг</p>
+                        </div>
                     </div>
                 </div>
             </div>

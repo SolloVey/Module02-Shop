@@ -98,14 +98,34 @@ list.addEventListener('mouseenter', function () {
     animationOne.beginElement();
 });
 
+// Появление tooltips при наведении
+let buttonOne = document.getElementById('btn_1');
+let tooltipOne = document.getElementById('FoodOne');
+let buttonTwo = document.getElementById('btn_2');
+let tooltipTwo = document.getElementById('FoodTwo');
+let buttonThree = document.getElementById('btn_3');
+let tooltipThree = document.getElementById('FoodThree');
 
-
-
-
-
+buttonOne.onmouseover = function () {
+    tooltipOne.style.visibility = 'visible';
+};
+buttonOne.onmouseout = function () {
+    tooltipOne.style.visibility = 'hidden';
+};
+buttonTwo.onmouseover = function() {
+    tooltipTwo.style.visibility = 'visible';
+};
+buttonTwo.onmouseout = function () {
+    tooltipTwo.style.visibility = 'hidden';
+};
+buttonThree.onmouseover = function () {
+    tooltipThree.style.visibility = 'visible';
+};
+buttonThree.onmouseout = function () {
+    tooltipThree.style.visibility = 'hidden';
+};
 
 // Скрипт для добавления товаров "добавить еще"
-
 // window.onload = function () {
 //     let item=document.getElementsByClassName('catalog-grid__item');
 //     let btn=document.querySelector('.catalog__btn');
@@ -126,6 +146,3 @@ list.addEventListener('mouseenter', function () {
 //         }
 //     })
 // }
-
-
-
