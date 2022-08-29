@@ -1383,12 +1383,16 @@ body {
 			height: 4rem;
 		}
 	}
-	&__minus {
-		pointer-events: none;
+	&__disabled {
 		background-image: url(../images/catalog/minus-counter.svg);
 		background-size: 20px 11px;
 		background-repeat: no-repeat;
 		opacity: 0.4;
+	}
+	&__minus {
+		background-image: url(../images/catalog/minus-counter.svg);
+		background-size: 20px 11px;
+		background-repeat: no-repeat;
 	}
 	&__plus {
 		background-image: url(../images/catalog/plus-counter.svg);
