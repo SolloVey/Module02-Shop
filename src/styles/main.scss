@@ -1693,6 +1693,9 @@ body {
 			}
 		}
 	}
+	&__disabled {
+		display: none;
+	}
 }
 
 .category {
@@ -1803,9 +1806,9 @@ body {
 			box-shadow: 0 0 0 2px #a9ac9f inset;
 		}
 		@media (max-width: $r_desk_1458) {
-			&:nth-child(n + 7) {
-				display: none;
-			}
+			// &:nth-child(n + 7) {
+			// 	display: none;
+			// }
 		}
 		@media (max-width: $r_tab) {
 			padding: 2.2rem 2rem 2.8rem;
@@ -1818,9 +1821,9 @@ body {
 		@media (max-width: $r_mob_400) {
 			height: 23.9rem;
 			padding: 1rem 1rem 1.5rem;
-			&:nth-child(n + 5) {
-				display: none;
-			}
+			// &:nth-child(n + 5) {
+			// 	display: none;
+			// }
 		}
 	}
 	&__footer {
@@ -1877,6 +1880,9 @@ body {
 			font-size: 1.2rem;
 			margin-bottom: 1.2rem;
 		}
+	}
+	&__disabled {
+		display: none;
 	}
 }
 

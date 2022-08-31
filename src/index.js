@@ -130,26 +130,27 @@ buttonThree.onmouseout = function () {
 
 
 // Скрипт для добавления товаров "добавить еще"
-// window.onload = function () {
-//     let item=document.getElementsByClassName('catalog-grid__item');
-//     let btn=document.querySelector('.catalog__btn');
+window.onload = function () {
+    let item = document.getElementsByClassName('grid__item');
+    let btn = document.querySelector('.catalog__btn');
 
-//     for (let i=8;i<item.length;i++) {
-//         item[i].style.display = "none";
-//     }
+    for (let i = 8; i < item.length; i++) {
+        item[i].classList.add('grid__disabled');
+    };
   
-//     let countD = 8;
-//     btn.addEventListener('click', function() {
-//         let item=document.getElementsByClassName('catalog-grid__item');
-//         countD += 4;
-//         console.log('btn')
-//         if (countD <= item.length){
-//             for(let i=0;i<countD;i++){
-//                 item[i].style.display = "block";
-//             }
-//         }
-//     })
-// }
+    let countD = 8;
+    btn.addEventListener('click', function() {
+        countD += 4;
+        if (countD <= item.length){
+            for (let i = 0; i < countD; i++) {
+                item[i].classList.remove('grid__disabled');
+            }
+        }
+        if (countD === item.length) {
+            btn.classList.add('catalog__disabled')
+        };
+    });
+};
 
 
 
